@@ -1,0 +1,15 @@
+{
+    "name": "Ola Telecom",
+    "short_name": "Ola Telecom",
+    "description": "Proveedor de Internet por Fibra Óptica e Inalámbrico",
+    "icons": [
+        {
+            "src": "/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "theme_color": "#1A0A2E",
+    "background_color": "#1A0A2E",
+    "display": "standalone"
+}
