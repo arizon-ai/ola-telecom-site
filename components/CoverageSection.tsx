@@ -284,9 +284,9 @@ export default function CoverageSection() {
             href="https://wa.me/584247612828?text=Hola%20Ari%2C%20quiero%20saber%20si%20tienen%20cobertura%20en%20mi%20zona%20%F0%9F%93%8D"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-text-primary px-8 py-3.5 font-bold text-bg-primary shadow-lg transition-all hover:bg-gray-200"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-green via-accent-cyan to-accent-cyan px-8 py-3.5 font-bold text-bg-primary btn-contratar"
           >
-            <MessageCircle size={18} className="text-accent-magenta" />
+            <MessageCircle size={18} />
             No encuentras tu zona? Preguntale a Ari
           </a>
         </motion.div>

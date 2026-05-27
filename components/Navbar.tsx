@@ -45,7 +45,7 @@ export default function Navbar() {
             href="https://wa.me/584247612828?text=Hola%20Ari%20%F0%9F%91%8B"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-accent-green hover:bg-green-400 text-bg-primary px-5 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105"
+            className="flex items-center gap-2 bg-accent-green hover:bg-green-400 text-bg-primary px-5 py-2.5 rounded-full font-semibold transition-all transform hover:scale-105 shadow-[0_0_16px_rgba(52,211,153,0.3)] hover:shadow-[0_0_28px_rgba(52,211,153,0.5)]"
           >
             <MessageCircle size={18} />
             Pagar / Contactar

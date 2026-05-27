@@ -8,7 +8,7 @@ export default function PlansSection() {
   return (
     <section
       id="planes"
-      className="relative z-10 overflow-hidden border-y border-white/[0.02] bg-bg-surface py-24 md:py-36"
+      className="relative z-10 overflow-hidden border-y border-white/[0.02] bg-bg-surface py-24 md:py-36 section-glow-divider"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-bg-surface/60 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-bg-primary/50" />

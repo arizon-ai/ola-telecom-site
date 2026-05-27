@@ -17,11 +17,16 @@ export default function FeatureCard({ icon, title, description, index }: Feature
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="glass-panel flex flex-col items-start gap-4 rounded-[28px] p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:border-white/15"
+      whileHover={{ y: -6 }}
+      className="glass-panel flex flex-col items-start gap-4 rounded-[28px] p-6 md:p-8 card-hover-glow hover:border-white/15"
     >
-      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(92,230,155,0.18),rgba(66,216,244,0.14),rgba(218,99,239,0.16))] text-text-primary">
+      <motion.div
+        className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,rgba(92,230,155,0.18),rgba(66,216,244,0.14),rgba(218,99,239,0.16))] text-text-primary"
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+      >
         {icon}
-      </div>
+      </motion.div>
       <div>
         <h3 className="mb-2 text-xl font-bold">{title}</h3>
         <p className="text-text-muted leading-relaxed">{description}</p>

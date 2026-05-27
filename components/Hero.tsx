@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Zap } from 'lucide-react';
 import FloatingOrbs from './FloatingOrbs';
@@ -82,21 +82,31 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Link
+              <motion.a
                 href="#planes"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-text-primary px-8 py-4 text-[15px] font-semibold text-bg-primary transition-all duration-300 hover:bg-gray-200 sm:w-auto"
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-green via-accent-cyan to-accent-cyan px-8 py-4 text-[15px] font-semibold text-bg-primary btn-contratar sm:w-auto"
               >
-                Ver Planes <ArrowRight size={18} />
-              </Link>
+                Ver Planes
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                >
+                  <ArrowRight size={18} />
+                </motion.span>
+              </motion.a>
 
-              <a
+              <motion.a
                 href="https://wa.me/584247612828?text=Hola%20Ari%20%F0%9F%91%8B"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-panel flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 px-8 py-4 text-[15px] font-semibold text-text-primary transition-all duration-300 hover:bg-white/5 sm:w-auto"
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.97 }}
+                className="glass-panel flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 px-8 py-4 text-[15px] font-semibold text-text-primary btn-contratar-glass sm:w-auto"
               >
                 Habla con Ari <MessageCircle size={18} className="text-accent-cyan" />
-              </a>
+              </motion.a>
             </motion.div>
 
             <motion.div
@@ -108,7 +118,7 @@ export default function Hero() {
               {stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="glass-panel rounded-2xl px-5 py-4 text-left shadow-[0_10px_30px_rgba(4,2,10,0.18)]"
+                  className="glass-panel rounded-2xl px-5 py-4 text-left shadow-[0_10px_30px_rgba(4,2,10,0.18)] card-hover-glow"
                 >
                   <div className="text-xl font-semibold text-text-primary">{stat.value}</div>
                   <div className="mt-1 text-sm text-text-muted">{stat.label}</div>
