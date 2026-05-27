@@ -21,13 +21,11 @@ export default function CoverageSection() {
 
   const fiberNodes: MapNode[] = [
     { name: 'Jauregui', x: 238, y: 165, labelX: 286, labelY: 152, lineX: 274, lineY: 156, anchor: 'start' },
-    { name: 'Umuquena', x: 178, y: 214, labelX: 230, labelY: 214, lineX: 218, lineY: 214, anchor: 'start' },
     { name: 'Seboruco', x: 182, y: 248, labelX: 232, labelY: 254, lineX: 220, lineY: 252, anchor: 'start' },
   ];
 
   const wirelessNodes: MapNode[] = [
     { name: 'Garcia de Hevia', x: 142, y: 102, labelX: 96, labelY: 92, lineX: 108, lineY: 96, anchor: 'end' },
-    { name: 'Panamericano', x: 225, y: 108, labelX: 282, labelY: 100, lineX: 270, lineY: 102, anchor: 'start' },
     { name: 'Antonio Romulo Costa', x: 122, y: 224, labelX: 86, labelY: 234, lineX: 96, lineY: 230, anchor: 'end' },
     { name: 'San Judas Tadeo', x: 205, y: 192, labelX: 272, labelY: 186, lineX: 258, lineY: 188, anchor: 'start' },
     { name: 'Jose Maria Vargas', x: 202, y: 300, labelX: 276, labelY: 314, lineX: 262, lineY: 308, anchor: 'start' },
@@ -163,14 +161,14 @@ export default function CoverageSection() {
                   <p className="text-xs uppercase tracking-[0.18em] text-text-subtle">
                     Cobertura fibra
                   </p>
-                  <p className="mt-2 text-2xl font-semibold text-text-primary">3 zonas</p>
+                  <p className="mt-2 text-2xl font-semibold text-text-primary">2 zonas</p>
                   <p className="mt-1 text-sm text-text-muted">Instalacion gratuita en zonas activas.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                   <p className="text-xs uppercase tracking-[0.18em] text-text-subtle">
                     Cobertura inalambrica
                   </p>
-                  <p className="mt-2 text-2xl font-semibold text-text-primary">7 municipios</p>
+                  <p className="mt-2 text-2xl font-semibold text-text-primary">5 municipios</p>
                   <p className="mt-1 text-sm text-text-muted">Expansiva y flexible para nuevas zonas.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">

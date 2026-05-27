@@ -10,7 +10,7 @@ export default function FeaturesSection() {
       icon: <Gauge size={24} className="text-accent-green" />,
       title: 'Velocidad Real',
       description:
-        'Hasta 400 Mbps simétricos por fibra óptica para hogares exigentes, teletrabajo, estudio y entretenimiento.',
+        'Hasta 1024 Mbps simétricos por fibra óptica para hogares exigentes, teletrabajo, estudio y entretenimiento.',
     },
     {
       icon: <Bot size={24} className="text-accent-cyan" />,

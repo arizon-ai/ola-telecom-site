@@ -35,22 +35,13 @@ export default function PlansSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 pt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 pt-4">
           {plans.map((plan, index) => (
             <PlanCard key={plan.id} plan={plan} index={index} />
           ))}
         </div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 text-center text-sm md:text-xs text-text-subtle max-w-4xl mx-auto glass-panel p-6 rounded-2xl"
-        >
-          <p>Precios expresados en USD. Pago en bolívares con 50% de recargo sobre tasa BCV del día.</p>
-          <p>Pago en COP a tasa fija de 4.000 COP/USD.</p>
-        </motion.div>
+
       </div>
     </section>
   );

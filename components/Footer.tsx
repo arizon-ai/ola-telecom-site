@@ -11,8 +11,8 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="Ola Telecom"
-              width={512}
-              height={512}
+              width={499}
+              height={500}
               className="h-16 w-auto"
             />
           </Link>

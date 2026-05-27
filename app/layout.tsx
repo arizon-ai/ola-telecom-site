@@ -16,17 +16,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ola-telecom-site.vercel.app'),
   title: 'Ola Telecom | Internet de alta velocidad para el Táchira',
   description:
-    'Fibra óptica hasta 400 Mbps y cobertura inalámbrica confiable en Seboruco y el sur del Táchira. Planes desde $20/mes y atención inmediata por WhatsApp.',
+    'Fibra óptica hasta 1024 Mbps y cobertura inalámbrica confiable en Seboruco y el sur del Táchira. Planes desde $20/mes y atención inmediata por WhatsApp.',
   applicationName: 'Ola Telecom',
   manifest: '/manifest.webmanifest',
   alternates: {
     canonical: '/',
   },
-  icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
-  },
+
   openGraph: {
     title: 'Ola Telecom | Internet de alta velocidad para el Táchira',
     description:
@@ -39,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ola Telecom | Internet de alta velocidad para el Táchira',
     description:
-      'Fibra óptica hasta 400 Mbps, instalación gratuita en zonas de fibra y atención por WhatsApp con Ari.',
+      'Fibra óptica hasta 1024 Mbps, instalación gratuita en zonas de fibra y atención por WhatsApp con Ari.',
   },
 };
 
@@ -57,7 +53,7 @@ const jsonLd = {
     'Jose Maria Vargas',
     'Garcia de Hevia',
     'San Judas Tadeo',
-    'Panamericano',
+
   ],
   address: {
     '@type': 'PostalAddress',

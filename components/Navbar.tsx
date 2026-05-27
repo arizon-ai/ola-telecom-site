@@ -28,10 +28,10 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Ola Telecom"
-            width={512}
-            height={512}
+            width={499}
+            height={500}
             priority
-            className="h-12 w-auto md:h-14"
+            className="h-14 w-auto md:h-16"
           />
         </Link>
 

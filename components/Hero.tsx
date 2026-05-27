@@ -14,7 +14,7 @@ export default function Hero() {
   ];
 
   const stats = [
-    { value: '400 Mbps', label: 'Velocidad maxima' },
+    { value: '1024 Mbps', label: 'Velocidad maxima' },
     { value: '$20', label: 'Planes desde' },
     { value: '24/7', label: 'Monitoreo de red' },
   ];
@@ -55,7 +55,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             >
-              Fibra optica hasta 400 Mbps y conexiones inalambricas confiables para
+              Fibra optica hasta 1024 Mbps y conexiones inalambricas confiables para
               hogares, comercios y negocios. Planes claros, instalacion rapida y
               atencion inmediata.
             </motion.p>
@@ -154,8 +154,8 @@ export default function Hero() {
                   <Image
                     src="/logo.png"
                     alt="Ola Telecom"
-                    width={512}
-                    height={512}
+                    width={499}
+                    height={500}
                     className="h-16 w-auto shrink-0"
                   />
                 </div>

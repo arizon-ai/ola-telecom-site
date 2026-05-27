@@ -1,10 +1,12 @@
+import dynamic from 'next/dynamic';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import PlansSection from '../components/PlansSection';
-import CoverageSection from '../components/CoverageSection';
-import FeaturesSection from '../components/FeaturesSection';
-import CTASection from '../components/CTASection';
-import Footer from '../components/Footer';
+
+const PlansSection = dynamic(() => import('../components/PlansSection'));
+const CoverageSection = dynamic(() => import('../components/CoverageSection'));
+const FeaturesSection = dynamic(() => import('../components/FeaturesSection'));
+const CTASection = dynamic(() => import('../components/CTASection'));
+const Footer = dynamic(() => import('../components/Footer'));
 
 export default function Home() {
   return (
