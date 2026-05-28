@@ -10,10 +10,14 @@ export default function PlanCard({ plan, index }: { plan: Plan; index: number })
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40, scale: 0.95 }}
+      initial={{ opacity: 0, y: 60, scale: 0.92 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.15,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       className={`relative glass-panel rounded-2xl p-6 md:p-8 flex flex-col h-full card-hover-glow ${
         plan.isPopular 
           ? 'border-accent-cyan/30 shadow-[0_0_40px_rgba(56,189,248,0.08)]' 
@@ -30,7 +34,7 @@ export default function PlanCard({ plan, index }: { plan: Plan; index: number })
           initial={{ opacity: 0, y: -10, scale: 0.9 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 + index * 0.1 }}
+          transition={{ delay: 0.3 + index * 0.15 }}
           className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-accent-green via-accent-cyan to-accent-magenta px-4 py-1 rounded-full text-[11px] uppercase tracking-wider font-bold text-bg-primary shadow-[0_4px_20px_rgba(56,189,248,0.3)] whitespace-nowrap"
         >
           {plan.badge}
@@ -46,7 +50,7 @@ export default function PlanCard({ plan, index }: { plan: Plan; index: number })
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 + index * 0.1, type: 'spring', stiffness: 200 }}
+            transition={{ delay: 0.25 + index * 0.15, type: 'spring', stiffness: 200 }}
           >
             {plan.speed}
           </motion.span>
@@ -63,10 +67,10 @@ export default function PlanCard({ plan, index }: { plan: Plan; index: number })
             <motion.li
               key={i}
               className="flex items-start gap-3 text-sm text-text-muted"
-              initial={{ opacity: 0, x: -10 }}
+              initial={{ opacity: 0, x: -12 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 + index * 0.08 + i * 0.06 }}
+              transition={{ delay: 0.35 + index * 0.12 + i * 0.07 }}
             >
               <Check size={18} className="text-accent-green shrink-0 mt-0.5" />
               <span>{feature}</span>
@@ -75,28 +79,23 @@ export default function PlanCard({ plan, index }: { plan: Plan; index: number })
         </ul>
       </div>
 
+      {/* All Contratar buttons have the same gradient + glow effect */}
       <motion.a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        whileHover={{ scale: 1.03 }}
+        whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.97 }}
-        className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-[15px] ${
-          plan.isPopular 
-            ? 'bg-gradient-to-r from-accent-green via-accent-cyan to-accent-cyan text-bg-primary btn-contratar' 
-            : 'glass-panel text-white btn-contratar-glass border border-white/10'
-        }`}
+        className="w-full flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-[15px] bg-gradient-to-r from-accent-green via-accent-cyan to-accent-cyan text-bg-primary btn-contratar"
       >
-        <MessageCircle size={18} className={plan.isPopular ? 'text-bg-primary' : 'text-accent-green'} />
+        <MessageCircle size={18} />
         Contratar
-        {plan.isPopular && (
-          <motion.span
-            animate={{ x: [0, 4, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <ArrowRight size={16} />
-          </motion.span>
-        )}
+        <motion.span
+          animate={{ x: [0, 4, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <ArrowRight size={16} />
+        </motion.span>
       </motion.a>
     </motion.div>
   );
