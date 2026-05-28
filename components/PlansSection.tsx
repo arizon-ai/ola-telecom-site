@@ -1,20 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll } from 'framer-motion';
 import { plans } from '../lib/plans';
 import PlanCard from './PlanCard';
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.18,
-      delayChildren: 0.15,
-    },
-  },
-};
-
 export default function PlansSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start 85%', 'start 15%'],
+  });
+
   return (
     <section
       id="planes"
@@ -24,7 +21,7 @@ export default function PlansSection() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-bg-primary/50" />
       <div className="pointer-events-none absolute left-[18%] top-16 h-48 w-48 rounded-full bg-accent-cyan/[0.03] blur-[90px]" />
       <div className="pointer-events-none absolute bottom-10 right-[12%] h-48 w-48 rounded-full bg-accent-magenta/[0.04] blur-[100px]" />
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
+      <div ref={sectionRef} className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -45,19 +42,17 @@ export default function PlansSection() {
           </motion.p>
         </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 pt-4"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-        >
-          {plans.map((plan) => (
-            <PlanCard key={plan.id} plan={plan} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 pt-4">
+          {plans.map((plan, index) => (
+            <PlanCard
+              key={plan.id}
+              plan={plan}
+              index={index}
+              total={plans.length}
+              scrollProgress={scrollYProgress}
+            />
           ))}
-        </motion.div>
-
-
+        </div>
       </div>
     </section>
   );

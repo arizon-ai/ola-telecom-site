@@ -1,33 +1,34 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useTransform, type MotionValue } from 'framer-motion';
 import { Check, MessageCircle, ArrowRight } from 'lucide-react';
 import { Plan } from '../lib/plans';
 
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 70,
-    scale: 0.9,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1] as const,
-    },
-  },
-};
+interface PlanCardProps {
+  plan: Plan;
+  index: number;
+  total: number;
+  scrollProgress: MotionValue<number>;
+}
 
-export default function PlanCard({ plan }: { plan: Plan }) {
+export default function PlanCard({ plan, index, total, scrollProgress }: PlanCardProps) {
   const message = encodeURIComponent(`Hola Ari, me interesa el plan ${plan.name}`);
   const whatsappUrl = `https://wa.me/584247612828?text=${message}`;
 
+  // Each card reveals at a different slice of the scroll progress
+  // Card 0 appears first (0% → 30%), card 1 (15% → 45%), etc.
+  const segmentSize = 0.35;
+  const gap = (1 - segmentSize) / Math.max(total - 1, 1);
+  const start = index * gap;
+  const end = start + segmentSize;
+
+  const opacity = useTransform(scrollProgress, [start, end], [0, 1]);
+  const y = useTransform(scrollProgress, [start, end], [70, 0]);
+  const scale = useTransform(scrollProgress, [start, end], [0.88, 1]);
+
   return (
     <motion.div
-      variants={cardVariants}
+      style={{ opacity, y, scale }}
       className={`relative glass-panel rounded-2xl p-6 md:p-8 flex flex-col h-full card-hover-glow ${
         plan.isPopular 
           ? 'border-accent-cyan/30 shadow-[0_0_40px_rgba(56,189,248,0.08)]' 
