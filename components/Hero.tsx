@@ -15,7 +15,7 @@ export default function Hero() {
 
   const stats = [
     { value: '1024 Mbps', label: 'Velocidad maxima' },
-    { value: '$20', label: 'Planes desde' },
+    { value: '$25', label: 'Planes desde' },
     { value: '24/7', label: 'Monitoreo de red' },
   ];
 

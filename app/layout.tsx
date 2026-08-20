@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ola-telecom-site.vercel.app'),
   title: 'Ola Telecom | Internet de alta velocidad para el Táchira',
   description:
-    'Fibra óptica hasta 1024 Mbps y cobertura inalámbrica confiable en Seboruco y el sur del Táchira. Planes desde $20/mes y atención inmediata por WhatsApp.',
+    'Fibra óptica hasta 1024 Mbps y cobertura inalámbrica confiable en Seboruco y el sur del Táchira. Planes desde $25/mes y atención inmediata por WhatsApp.',
   applicationName: 'Ola Telecom',
   manifest: '/manifest.webmanifest',
   alternates: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ola Telecom | Internet de alta velocidad para el Táchira',
     description:
-      'Planes de fibra e inalámbrico desde $20/mes. Consulta cobertura, paga tu servicio o contrata por WhatsApp con Ari.',
+      'Planes de fibra e inalámbrico desde $25/mes. Consulta cobertura, paga tu servicio o contrata por WhatsApp con Ari.',
     locale: 'es_VE',
     type: 'website',
     siteName: 'Ola Telecom',
@@ -53,7 +53,7 @@ const jsonLd = {
     'Jose Maria Vargas',
     'Garcia de Hevia',
     'San Judas Tadeo',
-
+    'Umuquena',
   ],
   address: {
     '@type': 'PostalAddress',

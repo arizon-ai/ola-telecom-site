@@ -161,14 +161,18 @@ export default function CoverageSection() {
                   <p className="text-xs uppercase tracking-[0.18em] text-text-subtle">
                     Cobertura fibra
                   </p>
-                  <p className="mt-2 text-2xl font-semibold text-text-primary">2 zonas</p>
+                  <p className="mt-2 text-2xl font-semibold text-text-primary">
+                    {fiberCoverage.length} zonas
+                  </p>
                   <p className="mt-1 text-sm text-text-muted">Instalacion gratuita en zonas activas.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                   <p className="text-xs uppercase tracking-[0.18em] text-text-subtle">
                     Cobertura inalambrica
                   </p>
-                  <p className="mt-2 text-2xl font-semibold text-text-primary">5 municipios</p>
+                  <p className="mt-2 text-2xl font-semibold text-text-primary">
+                    {wirelessCoverage.length} municipios
+                  </p>
                   <p className="mt-1 text-sm text-text-muted">Expansiva y flexible para nuevas zonas.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">

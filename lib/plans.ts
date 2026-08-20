@@ -19,7 +19,7 @@ export const plans: Plan[] = [
     type: 'Inalámbrico',
     speed: '20',
     speedUnit: 'Mbps',
-    price: 20,
+    price: 25,
     features: [
       'Hasta 20 Mbps de conexión inalámbrica',
       'Cobertura en varios municipios del Táchira',
@@ -33,7 +33,7 @@ export const plans: Plan[] = [
     type: 'Inalámbrico',
     speed: '40',
     speedUnit: 'Mbps',
-    price: 30,
+    price: 40,
     features: [
       'Hasta 40 Mbps para trabajo remoto y entretenimiento',
       'Mayor capacidad para varios dispositivos',
@@ -47,7 +47,7 @@ export const plans: Plan[] = [
     type: 'Fibra Óptica',
     speed: '410',
     speedUnit: 'Mbps',
-    price: 20,
+    price: 25,
     features: [
       'Hasta 410 Mbps por fibra óptica',
       'Velocidad simétrica para estudiar, trabajar y ver streaming',
@@ -61,7 +61,7 @@ export const plans: Plan[] = [
     type: 'Fibra Óptica',
     speed: '610',
     speedUnit: 'Mbps',
-    price: 30,
+    price: 40,
     features: [
       'Hasta 610 Mbps simétricos',
       'Ideal para hogares exigentes y negocios',

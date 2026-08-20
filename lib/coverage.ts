@@ -12,7 +12,14 @@ export const fiberCoverage: CoverageZone[] = [
     municipality: 'Jáuregui',
     sectors: ['Venegara', 'Sabana Grande'],
   },
-
+  {
+    municipality: 'José María Vargas',
+    sectors: ['El Cobre', 'Santana del Valle'],
+  },
+  {
+    municipality: 'Umuquena',
+    sectors: ['Casco Central'],
+  },
 ];
 
 export const wirelessCoverage: CoverageZone[] = [

@@ -99,7 +99,7 @@ export default function OpenGraphImage() {
                 maxWidth: '760px',
               }}
             >
-              Fibra óptica hasta 400 Mbps. Planes desde $20/mes. Contrata o paga por
+              Fibra óptica hasta 1024 Mbps. Planes desde $25/mes. Contrata o paga por
               WhatsApp con Ari.
             </div>
           </div>
