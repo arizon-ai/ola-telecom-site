@@ -19,6 +19,7 @@
 
 # cloudflare
 /.open-next/
+/.wrangler/
 
 # production
 /build
@@ -42,4 +43,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next
+next-env.d.ts
